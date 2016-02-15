@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AppWeb.ViewModel.ClientViewModel>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nomClient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prenomClient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telClient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emailClient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.faxClient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adresseClient)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomClient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prenomClient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telClient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emailClient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.faxClient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adresseClient)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Clientid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Clientid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Clientid })
+        </td>
+    </tr>
+}
+
+</table>

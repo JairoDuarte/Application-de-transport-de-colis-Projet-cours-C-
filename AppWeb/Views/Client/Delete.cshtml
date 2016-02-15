@@ -1,0 +1,66 @@
+﻿@model AppWeb.ViewModels.ClientViewModel
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ClientViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nomClient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomClient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prenomClient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prenomClient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telClient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telClient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emailClient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailClient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.faxClient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.faxClient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adresseClient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adresseClient)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

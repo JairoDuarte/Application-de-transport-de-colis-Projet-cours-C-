@@ -1,0 +1,27 @@
+﻿@model IEnumerable<AppWeb.ViewModel.TypeUserViewModel>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomType)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TypeUserid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TypeUserid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TypeUserid })
+        </td>
+    </tr>
+}
+
+</table>

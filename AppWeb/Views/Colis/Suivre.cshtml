@@ -1,0 +1,99 @@
+﻿@model AppWeb.ViewModels.ColisViewModel
+
+<div>
+    <h3>Informations sur le Colis</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Colisid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Colisid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.detailsColis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detailsColis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.etatColis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.etatColis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.localisation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.localisation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clientid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.nomClient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomDestinateire)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomDestinateire)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.villeDepartColisid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.villeDepartColis.NomVille)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.villeArriveColisid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.villeArriveColis.NomVille)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateDepartColis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateDepartColis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateArriveColis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateArriveColis)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

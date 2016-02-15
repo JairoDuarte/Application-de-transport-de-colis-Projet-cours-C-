@@ -1,0 +1,90 @@
+﻿@model List<AppWeb.ViewModels.ColisViewModel>
+
+<br />
+<h3>Liste des Colis</h3>
+<br />
+<p>
+    @Html.ActionLink("Ajoute Nouveau", "Create")
+</p>
+
+<br /><br />
+<div class="btn-group-vertical">
+    @using (Html.BeginForm("Details", "Colis", FormMethod.Get))
+    {
+        @Html.DisplayName("Code    ")
+        @Html.TextBox("id", "  ")
+
+        <input type="submit" value="Rechercher" />
+
+    }
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model[1].detailsColis)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model[1].prixColis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[1].etatColis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[1].localisation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[1].clientid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[1].nomDestinateire)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[1].villeDepartColisid)
+        </th>
+        
+        <th>
+            @Html.DisplayName("Date Commandé")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.detailsColis)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.prixColis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.etatColis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.localisation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Client.nomClient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomDestinateire)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.villeDepartColis.NomVille)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.ActionLink("Modifier", "Edit", new { id=item.Colisid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Colisid }) |
+            @Html.ActionLink("Supprimer", "Delete", new { id=item.Colisid })
+        </td>
+    </tr>
+}
+
+</table>

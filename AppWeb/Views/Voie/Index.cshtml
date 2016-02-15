@@ -1,0 +1,27 @@
+﻿@model IEnumerable<AppWeb.ViewModels.VoieTransmissionViewModel>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VoieTransmissionNom)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VoieTransmissionNom)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.VoieTransmissionid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VoieTransmissionid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VoieTransmissionid })
+        </td>
+    </tr>
+}
+
+</table>

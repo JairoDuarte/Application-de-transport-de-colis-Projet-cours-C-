@@ -1,0 +1,131 @@
+﻿@model AppWeb.ViewModels.ColisViewModel
+
+<div>
+    <h4>Details du Colis</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.detailsColis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.detailsColis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.typecolisid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type.nomTypeColis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.naturecolisid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nature.NomNatureColis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prixColis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prixColis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.etatColis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.etatColis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.localisation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.localisation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clientid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.nomClient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomDestinateire)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomDestinateire)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telDestinataire)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telDestinataire)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adresseDestinaraire)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adresseDestinaraire)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.villeDepartColisid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.villeDepartColis.NomVille)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.villeArriveColisid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.villeArriveColis.NomVille)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateDepartColis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateDepartColis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateArriveColis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateArriveColis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.voietransmissionid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Voie.VoieTransmissionNom)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.Colisid }) |
+</p>

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<AppWeb.ViewModels.TypeEmployeViewModel>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nomTypeEmploye)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomTypeEmploye)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TypeEmployeid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TypeEmployeid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TypeEmployeid })
+        </td>
+    </tr>
+}
+
+</table>

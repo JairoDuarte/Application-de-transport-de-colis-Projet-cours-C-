@@ -1,0 +1,60 @@
+﻿@model AppWeb.ViewModel.ClientViewModel
+
+<div>
+    <h4>ClientViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nomClient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomClient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prenomClient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prenomClient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telClient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telClient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emailClient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailClient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.faxClient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.faxClient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adresseClient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adresseClient)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Clientid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

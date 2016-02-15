@@ -1,0 +1,95 @@
+﻿@using Microsoft.AspNet.Identity
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Transport Colis ESTF</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Transport Colis ESTF", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Accueil", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Suivi colis", "suivi", "Colis")</li>
+                    
+                  @if (Request.IsAuthenticated)
+                  {
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Colis<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Liste Colis", "Index", "Colis")</li>
+                        
+                            <li>@Html.ActionLink("Nouveau", "Create", "Colis")</li>
+                            <li>@Html.ActionLink("Teste", "", "")</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clients<b class="caret"></b></a>
+                         <ul class="dropdown-menu">
+                            <li> @Html.ActionLink("Liste Client", "Index", "Client")</li>
+                            <li>@Html.ActionLink("Nouveau", "Create", "Client")</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" id="m1" data-toggle="dropdown">Employe<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Liste", "index", "Employe")</li>
+                            <li>@Html.ActionLink("Noveau", "Create", "Employe")</li>
+                            <li>@Html.ActionLink("Departement", "Index", "TypeEmploye")</li>
+    
+                         </ul>
+                    </li>
+                    <li>@Html.ActionLink("Statistique", "Index", "TypeEmploye")</li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gestion<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Colis</li>
+                               
+                                    <li>@Html.ActionLink("Type", "Index", "TypeColis")</li>
+                                    <li>@Html.ActionLink("Nature", "Index", "Nature")</li>
+                                    <li>@Html.ActionLink("Ville", "Index", "Ville")</li>
+                                    <li>@Html.ActionLink("Voie", "Index", "Voie")</li>
+                            
+                            <li class="dropdown-header">User Systéme</li>
+                                    <li>@Html.ActionLink("Liste", "index", "User")</li>
+                                    <li>@Html.ActionLink("Noveau", "Register", "Account")</li>
+                                    <li>@Html.ActionLink("Roles", "Index", "Roles")</li>
+                                    <li>@Html.ActionLink("User-Role", "CreateUserRoles", "User")</li>
+                        </ul>
+                    </li>
+                  }
+                    <li>@Html.ActionLink("À propos de", "About", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Transport Colis ESTF By Alfredo Duarte </p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

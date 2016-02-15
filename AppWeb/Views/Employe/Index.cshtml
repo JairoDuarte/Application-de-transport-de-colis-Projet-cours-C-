@@ -1,0 +1,70 @@
+﻿@model IEnumerable<AppWeb.ViewModels.EmployeViewModel>
+
+<br />
+<p>
+    @Html.ActionLink("Nouveau Employe", "Create")
+</p>
+<br /><br />
+<div class="btn-group-vertical">
+        @using (Html.BeginForm("Selectnom", "Employe", FormMethod.Post))
+        {
+            @Html.DisplayName("Nom    ")
+            @Html.TextBox("nom", "  ")
+
+            <input type="submit" value="Rechercher"/>
+            
+        }
+    </div>
+<br /><br /><br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nomEmploye)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prenomEmploye)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telEmploye)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emailEmploye)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adresseEmploye)
+        </th>
+        <th>
+            @Html.DisplayName("Departement")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomEmploye)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prenomEmploye)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telEmploye)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emailEmploye)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adresseEmploye)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TypeEmploye.nomTypeEmploye)
+        </td>
+        <td>
+            @Html.ActionLink("Modifier", "Edit", new { id=item.Employeid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Employeid }) |
+            @Html.ActionLink("Supprimer", "Delete", new { id=item.Employeid })
+        </td>
+    </tr>
+}
+
+</table>

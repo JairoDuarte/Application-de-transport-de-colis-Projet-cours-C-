@@ -1,0 +1,41 @@
+﻿@model List<AppWeb.ViewModels.UserViewModel>
+
+<br />
+<h3>Liste des utilisateurs du système</h3>
+<p>
+    @Html.ActionLink("Ajoute Nouveau", "Register","Account")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model[0].motpasseUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].nomUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].emailUser)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.motpasseUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emailUser)
+        </td>
+        <td>
+            @Html.ActionLink("Roles", "RolesUser", new { id = item.Userid }) |
+            @Html.ActionLink("Modifier", "Edit", new { id=item.Userid }) |
+            @Html.ActionLink("Supprimer", "Delete", new { id=item.Userid })
+        </td>
+    </tr>
+}
+
+</table>

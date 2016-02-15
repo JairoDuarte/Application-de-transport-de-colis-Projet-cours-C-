@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div> <img src="~/Content/encart.jpg" class="img-responsive" /> </div>
+
+
+<br /><br />
+<div class="row">
+    <div class="col-md-4">
+        <div class="bottom-left">
+            <p>
+              <h2>  VOUS SOUHAITEZ ENVOYER UN COLIS ?</h2>
+               <h4> Rien de plus simple.</h4>
+
+               <h3> Vous voulez envoyer un cadeau d’anniversaire, votre dernier DVD vendu sur Internet ?
+                Avec Mondial Relay, tout se fait de chez vous.
+                Vous n’avez plus qu’à déposer votre colis dans un de nos 4300 Points Relais ®. Vous
+                êtes attendu et les horaires d’ouvertures sont larges.
+                Avec Mondial Relay, c’est économique, simple, sûr et pratique.</h3>
+            </p>
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <p></p><p></p>
+    </div>
+
+    <div class="col-md-4">
+            <div class="form-group">
+                <h2>Suivi Colis</h2>
+                <form class="form-horizontal" method="get" action="~/Colis/Suivre">
+                    <fieldset>
+                        <div class="form-group">
+                            <div class="col-lg-10">
+                                <input type="text" name="id" class="form-control" id="inputEmail" placeholder="Code Colis" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button type="submit" class="btn btn-primary">Suivre</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+      </div>
+    </div>
+</div>

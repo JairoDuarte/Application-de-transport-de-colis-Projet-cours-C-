@@ -1,0 +1,60 @@
+﻿@model AppWeb.ViewModels.EmployeViewModel
+
+<div>
+    <h4>DETAIS DE L'EMPLOYE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nomEmploye)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomEmploye)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prenomEmploye)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prenomEmploye)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telEmploye)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telEmploye)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emailEmploye)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailEmploye)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adresseEmploye)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adresseEmploye)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Departement")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeEmploye.nomTypeEmploye)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.Employeid }) |
+    @Html.ActionLink("Liste Des Employes", "Index")
+</p>
