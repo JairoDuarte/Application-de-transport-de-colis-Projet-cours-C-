@@ -6,9 +6,15 @@ Dans ce projet j'ai utilisé : Framework Entity Framework , AutoMapper, Aspnet I
 J'ai eu l'oportunité de travaller avec :
 
 =>Entite de Domaine 
+
 =>Créer un Context de Entity Framework 
+
 =>Travaller avec Migrations  
+
 =>Travaller avec classes genériques d'Entites 
+
 =>Utiliser ViewModels 
+
 =>Utiliser DataAnnotations pour la validation de formulaires
+
 =>Mapier ViewModels x Entite de Domaine avec AutoMapper
